@@ -28,6 +28,26 @@
   font-size: 40px;
 }
 
+.titleOff { color: #888 }
+
+.tabelaOff {
+  border: 2px solid #888;
+  border-radius: 8px;
+  margin: 0 24px;
+  padding: 8px 36px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 280px;
+  color: #888;
+}
+
+.tabelaOff p {
+  margin: 0 0 16px 0 ;
+  font-weight: bold;
+  font-size: 40px;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -46,7 +66,7 @@
   width: 50px;
   height: 25px;
   border-radius: 20px;
-  background: #dfd9ea;
+  background: #72da67;
   transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   vertical-align: middle;
   cursor: pointer;
@@ -66,7 +86,7 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(128,128,128,0.1);
 }
 input:checked + .switch {
-  background: #72da67;
+  background: #dfd9ea;
 }
 input:checked + .switch::before {
   left: 27px;
