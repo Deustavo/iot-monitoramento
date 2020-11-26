@@ -3,21 +3,17 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
-  
-
-  
   const [estado, setEstado] = useState(true);
-  const [temperatura, setTemperatura] = useState()
-  const [umidadeAr, setUmidadeAr] = useState()
-  const [umidadeSolo, setUmidadeSolo] = useState()
-
-
+  const [temperatura, setTemperatura] = useState();
+  const [umidadeAr, setUmidadeAr] = useState();
+  const [umidadeSolo, setUmidadeSolo] = useState();
   useEffect(() => {
-
     Promise.all([1,2,3].map(id => {
-      fetch(`https://api.thingspeak.com/channels/1228925/fields/${id}.jsonx?Results=2`).then(resp => resp.json()).then((resp) => setTemperatura(resp))
+      fetch(`https://api.thingspeak.com/channels/1228925/fields/${id}.jsonx?Results=2`)
+        .then(resp => resp.json())
+          .then((resp) => setTemperatura(resp))
+            .catch((error) => setTemperatura(undefined))
     }))
-
   }, [])
   return (
     <div className={styles.container}>
@@ -33,17 +29,18 @@ export default function Home() {
       <div className={styles.tabelas}>
         <div className={estado ? styles.tabela : styles.tabelaOff}>
           <h2>Temperatura</h2>
-          <p>{estado ? `${temperatura} °` : '--'}</p>
+          <p>{estado ? temperatura !== undefined ? `${temperatura} °` : '??' : '--'}</p>
         </div>
         <div className={estado ? styles.tabela : styles.tabelaOff}>
           <h2>Umidade do Ar</h2>
-          <p>{estado ? umidadeAr : '--'}</p>
+          <p>{estado ? umidadeAr !== undefined ? `${umidadeAr}` : '??' : '--'}</p>
         </div>
         <div className={estado ? styles.tabela : styles.tabelaOff}>
           <h2>Umidade do Solo</h2>
-          <p>{estado ? umidadeSolo : '--'}</p>
+          <p>{estado ? umidadeSolo !== undefined ? `${umidadeSolo}` : '??' : '--'}</p>
         </div>
       </div>
+      {temperatura === undefined ? <h1 className={styles.error}>Falha ao se comunicar com o Team Speak</h1> : null}
       <div className={styles.tabelaDados}>
         <h1>Dados históricos</h1>
         <div>

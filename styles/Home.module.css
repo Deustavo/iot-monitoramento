@@ -58,7 +58,6 @@
 .tabelaDados h1 {
   text-align: center;
   margin-top: 80px;
-
 }
 
 .tabelaTitulos {
@@ -88,6 +87,12 @@
   align-items: center;
   justify-content: center;
   height: 40px;
+}
+
+.error {
+  color: #DE1738;
+  text-align: center;
+  margin: 80px 0 0 0;
 }
 
 /**
