@@ -1,14 +1,7 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-}
-
 .tabelas {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .tabela {
@@ -56,6 +49,46 @@
 }
 
 .header h1 { margin-right: 24px }
+
+.tabelaDados {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+.tabelaDados h1 {
+  text-align: center;
+  margin-top: 80px;
+
+}
+
+.tabelaTitulos {
+  display: flex;
+  font-weight: bold;
+  background-color: #444;
+  align-items: center;
+  height: 56px;
+  font-size: 20px;
+}
+
+.tabelaTitulos p {
+  width: 24.8vw;
+  text-align: center;
+}
+
+.tabelaColunas { display: flex }
+
+.tabelaColunas div p:nth-child(even) {
+  background-color: #444;
+}
+
+.tabelaColunas p {
+  width: 24.8vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
 
 /**
  * Simple HTML/CSS switch
