@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-
-import { ThingSpeak } from './api/ThingSpeak';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
