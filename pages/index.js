@@ -40,7 +40,7 @@ export default function Home() {
           <p>{estado ? umidadeSolo !== undefined ? `${umidadeSolo}` : '??' : '--'}</p>
         </div>
       </div>
-      {temperatura === undefined ? <h1 className={styles.error}>Falha ao se comunicar com o Team Speak</h1> : null}
+      {temperatura === undefined ? <h1 className={styles.error}>Falha ao se comunicar com o Thing Speak</h1> : null}
       <div className={styles.tabelaDados}>
         <h1>Dados históricos</h1>
         <div>
