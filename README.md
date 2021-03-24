@@ -1,3 +1,14 @@
+# Ola amigo
+
+<p>Esse repositório contem um projeto que fiz em grupo para materia de IOT no curso de Bigdata no Agronegócio. Nesse peojeto fiquei responsável pela interface da plataforma.</p>
+<p>👇 Conira o resultado aqui 👇</p>
+<p>https://iot-monitoramento.vercel.app/</p>
+<br>
+<br>
+<br>
+
+## Documentação
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
